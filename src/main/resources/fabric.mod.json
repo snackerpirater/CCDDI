@@ -3,7 +3,7 @@
   "id": "ccddi",
   "version": "${version}",
   "name": "CCDDI",
-  "description": "",
+  "description": "CCDDI, or Customizable Clientside Direction Damage Indicator, adds a simple, configurable, and reliable damage indicator to your heads-up-display. ",
   "authors": [],
   "contact": {
     "repo": "https://github.com/Spy/CCDDI"

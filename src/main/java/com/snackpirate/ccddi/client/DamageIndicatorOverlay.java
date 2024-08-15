@@ -84,6 +84,6 @@ public class DamageIndicatorOverlay implements LayeredDrawer.Layer {
 		if (Objects.requireNonNull(Config.style) == Config.IndicatorStyle.CUSTOM) {
 			return Config.customResource;
 		}
-		return Identifier.of("brilliant_banners", "textures/gui/" + Config.style.resource + ".png");
+		return Identifier.of("ccddi", "textures/gui/" + Config.style.resource + ".png");
 	}
 }

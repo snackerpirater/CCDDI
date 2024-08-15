@@ -79,7 +79,7 @@ public class Config implements ModMenuApi {
 								.option(Option.<Float>createBuilder()
 										.name(Text.literal("Longevity"))
 										.description(OptionDescription.of(Text.literal("How long the indicator exists on the screen.")))
-										.binding(1f, () -> persistenceTime, newVal -> persistenceTime = newVal)
+										.binding(5f, () -> persistenceTime, newVal -> persistenceTime = newVal)
 										.controller(opt -> FloatSliderControllerBuilder.create(opt)
 												.range(1f,30f)
 												.step(0.5f)
