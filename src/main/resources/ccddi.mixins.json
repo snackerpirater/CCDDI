@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.snackpirate.ccddi.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+  ],
+  "client": [
+    "CPNHMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

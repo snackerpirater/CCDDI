@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "ccddi",
+  "version": "${version}",
+  "name": "CCDDI",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/Spy/CCDDI"
+  },
+  "license": "MIT",
+  "icon": "assets/ccddi/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.snackpirate.ccddi.client.CCDDIClient"
+    ],
+    "modmenu": [
+      "com.snackpirate.ccddi.Config"
+    ]
+  },
+  "mixins": [
+    "ccddi.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}",
+    "yet_another_config_lib_v3": ">=3.5.0+1.21-fabric",
+    "modmenu": ">=11.0.1"
+  }
+}
