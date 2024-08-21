@@ -38,7 +38,7 @@ public class DamageIndicatorOverlay implements LayeredDrawer.Layer {
 		Matrix4f matrix4f = context.getMatrices().peek().getPositionMatrix();
 		BufferBuilder bufferBuilder = Tessellator.getInstance().begin(VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
 		Vector2f center = new Vector2f((float) context.getScaledWindowWidth() / 2, (float) context.getScaledWindowHeight() / 2);
-		int scale = MinecraftClient.getInstance().options.getGuiScale().getValue();
+		float scale = MinecraftClient.getInstance().options.getGuiScale().getValue()*Config.scale;
 		Vector2f p1 = new Vector2f(-5,-5).mul(scale);
 		Vector2f p2 = new Vector2f(-5,5).mul(scale);
 		Vector2f p3 = new Vector2f(5, 5).mul(scale);
