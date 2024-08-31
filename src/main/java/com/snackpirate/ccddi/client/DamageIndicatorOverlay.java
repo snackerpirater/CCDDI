@@ -18,7 +18,7 @@ import java.util.Objects;
 public class DamageIndicatorOverlay implements LayeredDrawer.Layer {
 	public static final DamageIndicatorOverlay instance = new DamageIndicatorOverlay();
 	public void render(DrawContext context, RenderTickCounter tickCounter) {
-//		MinecraftClient.getInstance().player.sendMessage(Text.literal("tick counter: " + tickCounter.getLastDuration()), true);
+
 		if (MinecraftClient.getInstance().options.hudHidden || (MinecraftClient.getInstance().player != null && MinecraftClient.getInstance().player.isSpectator()) || !Config.showIndicator) {
 			return;
 		}
