@@ -5,7 +5,9 @@ import com.snackpirate.ccddi.Config;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.LayeredDrawer;
+import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.render.*;
+import net.minecraft.client.util.GlfwUtil;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathConstants;
 import net.minecraft.util.math.MathHelper;
@@ -26,7 +28,6 @@ public class DamageIndicatorOverlay implements LayeredDrawer.Layer {
 			DamageIndicator d = iter.next();
 			float ticks = d.ticks(tickCounter);
 			drawIndicator(context, MathHelper.wrapDegrees(d.getYaw() - MinecraftClient.getInstance().cameraEntity.getYaw()) + 90, ticks /(Config.persistenceTime*20)*Config.indAlpha);
-
 			if (ticks < 0) iter.remove();
 		}
 	}
