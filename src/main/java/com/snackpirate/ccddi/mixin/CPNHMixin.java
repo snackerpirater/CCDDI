@@ -16,7 +16,7 @@ public class CPNHMixin {
 	@Inject(method = "onDamageTilt", at = @At("TAIL"))
 	private void onDamageTilt(DamageTiltS2CPacket packet, CallbackInfo ci) {
 		ClientPlayerEntity player = MinecraftClient.getInstance().player;
-		if (player != null && MinecraftClient.getInstance().targetedEntity != null) {
+		if (player != null) {
 			new DamageIndicator(player.getDamageTiltYaw() + MinecraftClient.getInstance().cameraEntity.getYaw());
 		}
 	}
