@@ -13,12 +13,12 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(ClientPlayNetworkHandler.class)
 public class CPNHMixin {
-	@Inject(method = "onDamageTilt", at = @At("TAIL"))
-	private void onDamageTilt(DamageTiltS2CPacket packet, CallbackInfo ci) {
-		ClientPlayerEntity player = MinecraftClient.getInstance().player;
-		if (player != null) {
-			new DamageIndicator(player.getDamageTiltYaw() + MinecraftClient.getInstance().cameraEntity.getYaw());
-		}
-	}
+  @Inject(method = "onDamageTilt", at = @At("TAIL"))
+  private void onDamageTilt(DamageTiltS2CPacket packet, CallbackInfo ci) {
+    ClientPlayerEntity player = MinecraftClient.getInstance().player;
+    if (player != null) {
+      new DamageIndicator(player.getDamageTiltYaw() + MinecraftClient.getInstance().cameraEntity.getYaw());
+    }
+  }
 
 }
